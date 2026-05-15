@@ -1,0 +1,14 @@
+$Oswald: ('ExtraLight', 200),
+    ('Light', 300),
+    ('Regular', 400),
+    ('Medium', 500)
+    ('Semibold', 600),
+    ('Bold', 700);
+
+@each $name, $weight in $Oswald {
+    @font-face {
+        font-family: 'oswald';
+        src: url('/public/fonts/Oswald-#{$name}.ttf');
+        font-weight: $weight;
+    }
+}
