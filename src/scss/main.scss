@@ -95,20 +95,40 @@ input {
         align-items: center;
         justify-content: space-between;
 
+        @include media(400) {
+            gap: 20px;
+        }
+
         &-logo {
             width: 50px;
             height: 50px;
+
+            @include media(750) {
+                width: 35px;
+                height: 35px;
+            }
+
         }
 
         &-right {
             display: flex;
             gap: 50px;
             align-items: center;
+
+            @include media(750) {
+                gap: 30px;
+            }
         }
 
         &-list {
             display: flex;
             gap: 20px;
+            align-items: center;
+
+            @include media(500) {
+                gap: 7px;
+                flex-direction: column;
+            }
         }
 
         &-link {
@@ -124,6 +144,10 @@ input {
                 font-size: 24px;
                 font-family: oswald;
                 font-weight: 500;
+
+                @include media(750) {
+                    font-size: 18px;
+                }
             }
         }
 
@@ -133,6 +157,11 @@ input {
             img {
                 width: 55px;
                 height: 55px;
+
+                @include media(750) {
+                    width: 35px;
+                    height: 35px;
+                }
             }
         }
     }
@@ -144,6 +173,12 @@ input {
         border-radius: 5px;
         font-family: oswald;
         font-size: 16px;
+
+        @include media(750) {
+            padding: 3px 6px;
+            font-size: 14px;
+        }
+
 
         &:hover {
             color: white;
@@ -168,7 +203,12 @@ input {
             font-size: 36px;
             margin-bottom: 20px;
             color: var(--text);
+
+            @include media(810) {
+                font-size: 24px;
+            }
         }
+
 
         &-link {
             display: flex;
@@ -182,11 +222,27 @@ input {
             max-width: 120px;
             width: 100%;
 
+            @include media(810) {
+                max-width: 85px;
+                padding: 3px 6px;
+                gap: 5px;
+
+                img {
+                    width: 25px;
+                    height: 10px;
+                }
+            }
+
             h3 {
                 font-family: oswald;
                 font-size: 18px;
                 color: var(--btnText);
                 font-weight: 400;
+
+                @include media(810) {
+                    font-size: 16px;
+                }
+
             }
         }
     }
@@ -210,6 +266,10 @@ input {
             width: fit-content;
             color: var(--text);
 
+            @include media(810) {
+                font-size: 26px;
+            }
+
             &::after {
                 content: '';
                 width: 100%;
@@ -227,6 +287,10 @@ input {
             font-size: 24px;
             color: var(--text);
 
+            @include media(810) {
+                font-size: 18px;
+            }
+
             span {
                 font-weight: 600;
             }
@@ -241,6 +305,10 @@ input {
         position: relative;
         width: fit-content;
         color: var(--text);
+
+        @include media(810) {
+            font-size: 26px;
+        }
 
         &::after {
             content: '';
@@ -260,6 +328,20 @@ input {
             grid-template-columns: repeat(3, 1fr);
             grid-auto-rows: 165px;
             gap: 15px;
+
+            @include media(810) {
+                grid-auto-rows: 130px;
+            }
+
+            @include media(670) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 150px;
+            }
+
+            @include media(390) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 190px;
+            }
         }
 
         &-card {
@@ -275,6 +357,10 @@ input {
             padding: 10px;
             transition: .4s;
 
+            @include media(810) {
+                padding: 5px;
+            }
+
             &:hover {
                 box-shadow: 5px 5px 0 0 var(--boxShadow);
                 scale: 1.01;
@@ -289,6 +375,11 @@ input {
             &-logo {
                 width: 20px;
                 height: 20px;
+
+                @include media(810) {
+                    width: 15px;
+                    height: 15px;
+                }
             }
 
             &-title {
@@ -296,6 +387,10 @@ input {
                 font-size: 22px;
                 font-weight: 400;
                 color: var(--text);
+
+                @include media(810) {
+                    font-size: 18px;
+                }
             }
 
             &-text {
@@ -303,6 +398,10 @@ input {
                 font-size: 18px;
                 font-weight: 300;
                 color: var(--text);
+
+                @include media(810) {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -315,6 +414,10 @@ input {
         position: relative;
         width: fit-content;
         color: var(--text);
+
+        @include media(810) {
+            font-size: 26px;
+        }
     }
 
     &__cards {
@@ -322,6 +425,13 @@ input {
         display: flex;
         flex-direction: column;
         gap: 50px;
+
+        @include media(810) {
+            gap: 20px;
+        }
+
+
+
     }
 
     &__card {
@@ -334,6 +444,14 @@ input {
         padding: 15px;
         transition: .4s;
 
+        @include media(810) {
+            max-width: 500px;
+        }
+
+        @include media(550) {
+            max-width: 300px;
+        }
+
         &:hover {
             box-shadow: 5px 5px 0 0 var(--boxShadow);
             scale: 1.01;
@@ -344,6 +462,14 @@ input {
             font-size: 32px;
             font-weight: 500;
             color: var(--text);
+
+            @include media(810) {
+                font-size: 24px;
+            }
+
+            @include media(550) {
+                font-size: 20px;
+            }
         }
 
         &-desc {
@@ -352,6 +478,14 @@ input {
             font-weight: 300;
             margin: 10px 0 20px 0;
             color: var(--text);
+
+            @include media(810) {
+                font-size: 18px;
+            }
+
+            @include media(550) {
+                font-size: 16px;
+            }
         }
 
         &-link {
@@ -370,6 +504,13 @@ input {
             font-size: 18px;
             color: var(--btnText);
             font-weight: 300;
+
+            @include media(810) {
+                max-width: 120px;
+                padding: 3px 6px;
+                gap: 5px;
+                font-size: 14px;
+            }
         }
     }
 
@@ -377,10 +518,15 @@ input {
         max-width: 350px;
         width: 100%;
         border-radius: 10px;
+        border-top: var(--border);
         border-bottom: var(--border);
         border-right: var(--border);
         padding: 15px;
         transition: .4s;
+
+        @include media(810) {
+            width: 210px;
+        }
 
         &:hover {
             box-shadow: 5px 5px 0 0 var(--boxShadow);
@@ -393,6 +539,14 @@ input {
             font-weight: 500;
             margin-bottom: 20px;
             color: var(--text);
+
+            @include media(810) {
+                font-size: 24px;
+            }
+
+            @include media(550) {
+                font-size: 20px;
+            }
         }
 
         &-link {
@@ -411,6 +565,13 @@ input {
             font-size: 16px;
             color: var(--btnText);
             font-weight: 300;
+
+            @include media(810) {
+                max-width: 200px;
+                padding: 3px 6px;
+                gap: 5px;
+                font-size: 14px;
+            }
         }
     }
 }
@@ -422,12 +583,21 @@ input {
         width: fit-content;
         margin-bottom: 50px;
         color: var(--text);
+
+        @include media(810) {
+            font-size: 26px;
+        }
     }
 
     &__cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+
+        @include media(500) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__card {
@@ -440,6 +610,10 @@ input {
         padding: 15px;
         transition: .4s;
 
+        @include media(500) {
+            max-width: 250px;
+        }
+
         &:hover {
             box-shadow: 5px 5px 0 0 var(--boxShadow);
             scale: 1.01;
@@ -451,6 +625,10 @@ input {
             font-weight: 500;
             margin-bottom: 10px;
             color: var(--text);
+
+            @include media(810) {
+                font-size: 20px;
+            }
         }
 
         &-link {
@@ -469,6 +647,10 @@ input {
             color: white;
             font-weight: 300;
             text-transform: uppercase;
+
+            @include media(810) {
+                font-size: 14px;
+            }
         }
     }
 
@@ -484,6 +666,10 @@ input {
             margin-top: 5px;
             width: fit-content;
             color: var(--successText);
+
+            @include media(810) {
+                font-size: 12px;
+            }
         }
 
         &-error {
@@ -494,6 +680,10 @@ input {
             margin-top: 5px;
             width: fit-content;
             color: var(--errorText);
+
+            @include media(810) {
+                font-size: 12px;
+            }
         }
 
         &-title {
@@ -502,6 +692,10 @@ input {
             width: fit-content;
             margin-bottom: 50px;
             color: var(--text);
+
+            @include media(810) {
+                font-size: 26px;
+            }
 
         }
 
@@ -559,6 +753,11 @@ input {
                 font-family: oswald;
                 font-size: 18px;
                 font-weight: 400;
+
+                @include media(810) {
+                    font-size: 14px;
+                    width: fit-content;
+                }
             }
         }
     }
@@ -572,12 +771,18 @@ input {
             width: fit-content;
             margin-bottom: 50px;
             color: var(--text);
+            @include media(810) {
+                font-size: 26px;
+            }
         }
 
         &-box {
             display: flex;
             gap: 20px;
             align-items: center;
+            @include media(810) {
+                flex-direction: column;
+            }
         }
 
         &-card {
@@ -609,8 +814,12 @@ input {
             &-name {
                 font-family: oswald;
                 font-size: 24px;
-                width: fit-content;   
+                width: fit-content;
                 color: var(--text);
+
+                @include media(810) {
+                    font-size: 20px;
+                }
             }
 
             &-link {
@@ -630,6 +839,11 @@ input {
                 font-size: 18px;
                 font-weight: 400;
                 text-transform: uppercase;
+
+                @include media(810) {
+                    font-size: 14px;
+                    width: fit-content;
+                }
             }
         }
     }
